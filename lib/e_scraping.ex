@@ -1,5 +1,10 @@
 defmodule EScraping do
   def run(url) do
-    body = HTTPoison.get! url
+    ret = HTTPoison.get! url
+    %HTTPoison.Response{body: body} = ret
+
+    body
+    |> Floki.find("a")
+    |> Floki.attribute("href")
   end
 end

@@ -29,7 +29,7 @@ defmodule EScraping.Mixfile do
   defp deps do
     [
       {:httpoison, "~> 0.10.0"},
-      {:poison, "~> 3.0"}
+      {:floki, "~> 0.11.0"}
     ]
   end
 end
